@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin:0;
+    color: #007aa3;
+    text-align: center;
+}
+
+html, body{
+    background-color: #00a5e0;
+}
+
+.main-container{
+    border: 4px solid #6457a6;
+    border-radius: 10px;
+    margin: 2rem;
+    background-color: #89a1ef;
+}
+nav,section,footer,article,aside{
+    border: 2px solid #6457a6;
+    ;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+article, aside{
+    width: 40%;
+    display: inline-block;
+    height: 200px;
+    background-color:#fecef1;
+}
+
+nav, section, footer{
+    background-color: #f3b9d1;
+}
