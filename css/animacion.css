@@ -81,7 +81,6 @@ Vamos a crear animaciones con el uso de css a partir de condicionales
     color:white;
     text-align: center;
     height: 200px;
-    display: flex;
     justify-content: center;
     align-items: center;
     animation-name: animacion_test;
