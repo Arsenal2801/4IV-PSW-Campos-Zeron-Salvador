@@ -7,73 +7,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Web</title>
     <link rel="stylesheet" href="css/miestilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 
 <body>
     <div class="main-container">
-        <h1>CAMPOS ZERON SALVADOR</h1>
-    </div>
-    <div>
+        <h1 id="Inicio">CAMPOS ZERON SALVADOR </h1>
+        <h2>Desarrollador de Software</h2>
+        <br>
         <h3>
-            <aside><a href = #SobreMi... >Sobre Mi...</a></aside>
-            <aside><a href = #MisEstudios > Mis Estudios</a></aside>
-            <aside><a href = #Aficiones>Hobbies</a></aside>
-            <aside><a href = #MisHabilidades >Mis Habilidades</a></aside>
-            <aside><a href = #Galeria >Galeria de Imagenes Sobre Mi</a></aside>
+            <ul class="menu" data-animation="to-down" align="left">
+                <li>
+                    <a href=#SobreMi...>
+                        <span>Sobre Mi...</span>
+                        <span><i class="fas fa-address-card" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href=#MisEstudios>
+                        <span>Mis Estudios</span>
+                        <span><i class="fas fa-users" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href=#MisHabilidades>
+                        <span>Habilidades</span>
+                        <span><i class="fas fa-tasks" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href=#contacto>
+                        <span>Contacto</span>
+                        <span><i class="fas fa-envelope-open-text" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href=#Aficiones>
+                        <span>Pasatiempos</span>
+                        <span><i class="fas fa-users" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href=#Galeria>
+                        <span>Galeria de Imagenes Sobre Mi</span>
+                        <span><i class="fas fa-address-card" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+            </ul>
         </h3>
+        <br>
     </div>
     <div class="second-container">
-        <table border="true" width="100%">
+        <br>
+        <table width="100%">
             <tbody>
                 <tr>
-                    <th width="376"><img src="imagenes\WhatsApp Image 2021-03-09 at 10.45.15 PM.jpeg" alt=""></th>
-                    <th colspan="4" rowspan="2" id="MisEstudios">Mis Estudios
-                        <p>Hola soy Salvador y te quiero contar un poco sobre mis estudios</p>
+                    <th>
+                        <figure><img class="img" src="imagenes\WhatsApp Image 2021-03-09 at 10.45.15 PM.jpeg"></figure>
                     </th>
-                </tr>
-                <tr>
-                    <th rowspan="2" id="SobreMi...">Sobre Mi...
-                        <p align="left">
-                            Aqui te voy a hablar un poco sobre mis gustos musicales, peliculas, series, etc.
-                            <ol type="I" align="left">
-                                <li>
-                                    Musica Favorita
-                                        <ul>
-                                            <li>
-                                            Bandas y Cantantes(Solistas)
-                                                <ul>
-                                                    <li>Slepping With Sirens</li>
-                                                    <li>Metallica</li>
-                                                    <li>Maroon 5</li>
-                                                    <li>Twenty One Pilots</li>
-                                                    <li>Ed Sheeran</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Canciones
-                                                <ul>
-                                                    <li>No tengo</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                </li>
-                                <li>
-
-                                </li>
-                            </ol>
+                    <th colspan="4" rowspan="2" id="MisEstudios"><a href="#Inicio">
+                            <h2>Mis Estudios</h2>
+                        </a>
+                        <p>
+                            <br>
+                        <div class="head">
+                            <h4>
+                                <bold>Secundaria:</bold>
+                            </h4>
+                        </div>
+                        <br>
+                        En 2016 entré a la escuela secundaria técnica #27 "Alberto J. Pani".
+                        <br>
+                        Durante los dos primeros años estudié el taller de electricidad,
+                        <br>
+                        ahí aprendí a crear y diseñar circuitos eléctricos.
+                        <br>
+                        En el último año de mi educación secundaria ingresé a la especialidad de diseño
+                        <br>
+                        y mecánica automotriz, donde aprendí algunos principios básicos de esta área
+                        <br>
+                        como cambiar neumáticos, bujías y sistemas eléctricos; en cuanto a lo más avanzado
+                        <br>
+                        estudié el funcionamiento del motor a combustión interna y realicé diagnósticos en
+                        <br>
+                        automotores.
+                        <br>
+                        <br>
+                        <div class="head">
+                            <h4>
+                                <bold>Bachillerato:</bold>
+                            </h4>
+                        </div>
+                        <br>
+                        Ingresé al Centro de Estudios Científicos y Tecnológicos #9 "Juan de Dios Bátiz"
+                        <br>
+                        en el año 2019. Los primeros dos semestres tomé tronco común, me destaqué en las
+                        <br>
+                        materias como álgebra y computación. En tercer semestre elegí la especialidad de
+                        <br>
+                        programación en la que, con mi equipo, diseñé "Smart School Software", una
+                        <br>
+                        empresa cuyo objetivo central es realizar aplicaciones de carácter académico;
+                        <br>
+                        la primera aplicación que diseñamos como parte de este proyecto fue "CaNot Plus",
+                        <br>
+                        un calendario que organiza las actividades del usuario. Actualmente estoy cursando el
+                        <br>
+                        cuarto semestre, donde continúo aprendiendo diversos lenguajes de programación como
+                        <br>
+                        Java Script, CSS y Python.
+                        <br>
+                        <br>
+                        <a href="#Inicio">Regresa al menu interactivo</a>
                         </p>
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="2" id="MisHabilidades">Mis Habilidades</th>
-                    <th id="Aficiones">Hobbies</th>
+                    <th rowspan="2" id="SobreMi...">
+                        <div div="label-container">
+                            <div class="label"><a href="#Inicio">
+                                    <br>
+                                    <h2>Sobre Mi...</h2>
+                                </a></div>
+                            <br>
+                            <p>
+                                Mi nombre es Salvador Campos Zerón.
+                                <br>
+                                Soy estudiante del CeCyT 9 del Instituto Politécnico Nacional.
+                                <br>
+                                Nací en la Ciudad de México en 2004.
+                                <br>
+                                Me gustaría estudiar la Ingeniería en Sistemas Computacionales en la ESCOM del IPN.
+                                <br>
+                                Me interesa principalmente el desarrollo de videojuegos, desarrollo web y
+                                <br>
+                                desarrollo de software.
+                                <br>
+                                <br>
+                                <a href="#Inicio">Regresa al menu interactivo</a>
+                            </p>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" id="MisHabilidades"><a href="#Inicio">
+                            <br>
+                            <h2>Habilidades</h2>
+                            <br>
+                        </a>
+                        <p>
+                            Soy bueno en el ambito computacional, es decir,
+                            <br>
+                            en el uso de herramientas como word, power point, etc.
+                            <br>
+                            Tambien en el desarrollo de programas en "C" para
+                            <br>
+                            el microcontrolador arduino.
+                            <br>
+                            Agregando a esto tengo conocimientos basicos en electricidad
+                            <br>
+                            y mecánica automotriz.
+                            <br>
+                            <br>
+                            <a href="#Inicio">Regresa al menu interactivo</a>
+                        </p>
+                    </th>
+                    <th id="Aficiones"><a href="#Inicio">
+                            <br>
+                            <h2>Pasatiempos</h2>
+                        </a>
+                        <br>
+                        <p>
+                            En mi tiempo libre me gusta jugar videojuegos,
+                            <br>
+                            escuchar musica, programar, programar video juegos,
+                            <br>
+                            salir con mi familia, ver videos en youtube,
+                            <br>
+                            practicar con mi guitarra, jugar con mis amigos y
+                            <br>
+                            hablar con ellos.
+                            <br>
+                            <br>
+                            <a href="#Inicio">Regresa al menu interactivo</a>
+                        </p>
+                    </th>
                 </tr>
             </tbody>
         </table>
-        <section id="Galeria">
-            <h1>Galeria de Imagenes Sobre Mi</h1>
-        </section>
+        <br>
     </div>
-    <a href="index.html">Regreso A Index</a>
+    <div class="main-container">
+        <section id="Galeria">
+            <header>
+                <h2><a href="#Inicio">Galeria de Imagenes Sobre Mi</a></h2>
+            </header>
+            <br>
+            <article>
+                <a href="https://web.facebook.com/Polibots-Academy-109107943962198/">
+                    <figure>
+                        <img src="imagenes/WhatsApp Image 2021-03-13 at 10.43.34 AM.jpeg" width="300">
+                        <figcaption>Curso de Polibots-Academy</figcaption>
+                    </figure>
+                </a>
+            </article>
+            <br>
+            <article>
+                <figure>
+                    <img src="imagenes/logo.ico">
+                    <figcaption>Logo De Mi Primera App</figcaption>
+                </figure>
+            </article>
+            <br>
+            <article>
+                <figure>
+                    <img src="imagenes/logoempresa.jpg" width="300">
+                    <figcaption>Logo De Mi Primera Empresa</figcaption>
+                </figure>
+            </article>
+            <br>
+            <article>
+                <figure>
+                    <img src="imagenes/codigo_java.png" width="350">
+                    <figcaption>Codigo De CaNot Plus</figcaption>
+                </figure>
+            </article>
+            <br>
+            <br>
+            <a href="#Inicio">Regresa al menu interactivo</a>
+        </section>
+        <br>
+    </div>
+    <div class="box">
+        <h2 id="contacto"><a href="#Inicio">Contacto</a></h2>
+        <article>
+            <figure>
+                <img class="cover" src="imagenes/github-sign.png" width="70">
+                <figcaption><a href="https://github.com/Arsenal2801">Mi GitHub</a></figcaption>
+            </figure>
+            <figure>
+                <img class="cover" src="imagenes/envelope.png" width="70">
+                <figcaption><a href="mailto:campos.zeron.salvador28@gmail.com">Mi Correo</a></figcaption>
+            </figure>
+            <figure>
+                <img class="cover" src="imagenes/telephone-symbol-button.png" width="70">
+                <figcaption><a href="tel:+525548499911">Mi Telefono</a></figcaption>
+            </figure>
+            <br>
+            <br>
+            <a href="#Inicio">Regresa al menu interactivo</a>
+            <br>
+            <br>
+        </article>
+
+    </div>
+    <b><a href="index.html" class="regreso">Regreso A Inicio</a></b>
+    <br>
+    <br>
+    <footer class="page-footer" >
+        <small>Iconos de menu hechos por George Martsoukos</small>
+        <br>
+        <small>Iconos de contacto hechos por Dave Gandy</small>
+    </footer>
 </body>
+
 </html>
