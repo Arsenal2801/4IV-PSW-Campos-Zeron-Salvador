@@ -1,9 +1,13 @@
-html, body{
+html,
+body {
     background-color: #706F9B;
     color: #000000;
 }
+
+
 /*https://coolors.co/0beaab-e9d758-348aa7-706f9b-7e5b86*/
-.nav{
+
+.nav {
     background-image: url("hobbies5.jpg");
     padding: 100px;
     padding-top: 50px;
@@ -13,14 +17,23 @@ html, body{
     border-radius: 1rem;
 }
 
-.container{
+.container {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
+    padding: 1rem;
 }
 
-.columna1, .columna2, .columna3, .container-inner{
+.columna1 {
+    color: #d81e5b;
+    text-shadow: 0.8em 0.8em 0.4em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+}
+
+.columna1,
+.columna2,
+.columna3,
+.container-inner {
     width: 100%;
 }
 
@@ -38,7 +51,20 @@ html, body{
     -moz-transform: scale(11);
 }
 
-.menu li{
+.columna2 {
+    font-size: 20px;
+    font-style: italic;
+    background-color: #3a9bbb;
+    padding: 15px;
+    border-radius: 1rem;
+}
+
+.columna3 {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.menu li {
     display: inline-block;
     text-align: center;
     align-items: center;
@@ -46,7 +72,7 @@ html, body{
     padding-left: 2rem;
 }
 
-.menu li a:hover{
+.menu li a:hover {
     background-color: #0beaab;
     box-shadow: 0px 0px 100px #000000;
     z-index: 2;
@@ -58,83 +84,61 @@ html, body{
     -moz-transform: scale(1.2);
 }
 
-@media (min-width: 600px){
-    
-    .columna1{
+@media (min-width: 600px) {
+    .columna1 {
         width: 25%;
         height: 100vh;
     }
-    .container-inner{
+    .container-inner {
         width: 75%;
     }
 }
 
-@media (min-width: 800px){
-    .container{
+@media (min-width: 800px) {
+    .container {
         width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
-} 
-
-.container.gallery-container {
-    background-color: #fff;
-    color: #35373a;
-    min-height: 100vh;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
 
-.gallery-container h1 {
-    text-align: center;
-    margin-top: 70px;
-    font-family: 'Droid Sans', sans-serif;
-    font-weight: bold;
-}
-
-.gallery-container p.page-description {
-    text-align: center;
-    max-width: 800px;
-    margin: 25px auto;
-    color: #888;
-    font-size: 18px;
-}
-
-.tz-gallery {
-    padding: 40px;
-}
-
-.tz-gallery .lightbox img {
+#galeria {
+    margin: auto;
     width: 100%;
-    margin-bottom: 30px;
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    max-width: 960px;
+    column-count: 3;
+    -webkit-column-span: all;
+    column-span: all;
+    -moz-column-rule: 1px solid #bbb;
+    -webkit-column-rule: 1px solid #bbb;
+    column-rule: 1px solid #bbb;
 }
 
-
-.tz-gallery .lightbox img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+#galeria header {
+    color: #d81e5b;
+    text-shadow: 0.8em 0.8em 0.4em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+    display: inline-flexbox;
+    text-align: center;
+    -webkit-column-span: all;
+    column-span: all;
 }
 
-.tz-gallery img {
-    border-radius: 4px;
+#galeria img {
+    align-items: center;
+    width: 150px;
 }
 
-.baguetteBox-button {
-    background-color: transparent !important;
-}
-
-
-@media(max-width: 768px) {
-    body {
-        padding: 0;
+@media (max-width: 767px) {
+    #galeria {
+        columns: 2;
     }
-
-    .container.gallery-container {
-        border-radius: 0;
-    }
 }
 
 
+/* Móviles en vertical */
 
+@media (max-width: 480px) {
+    #galeria {
+        columns: 1;
+    }
+}
