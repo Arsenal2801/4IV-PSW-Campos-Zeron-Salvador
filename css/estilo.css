@@ -28,6 +28,7 @@ body {
 .columna1 {
     color: #d81e5b;
     text-shadow: 0.8em 0.8em 0.4em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+    text-align: center;
 }
 
 .columna1,
@@ -57,8 +58,8 @@ body {
     background-color: #3a9bbb;
     padding: 15px;
     border-radius: 1rem;
-    justify-content: center;
     text-align: center;
+    padding: 8px;
 }
 
 .columna3 {
