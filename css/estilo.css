@@ -8,6 +8,7 @@ body {
 /*https://coolors.co/0beaab-e9d758-348aa7-706f9b-7e5b86*/
 
 .nav {
+    text-align: center;
     background-image: url("hobbies5.jpg");
     padding: 100px;
     padding-top: 50px;
@@ -68,6 +69,7 @@ body {
 }
 
 .menu li {
+    text-align: center;
     display: inline-block;
     text-align: center;
     align-items: center;
