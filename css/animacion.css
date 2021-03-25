@@ -30,7 +30,7 @@ Vamos a crear animaciones con el uso de css a partir de condicionales
     }
     to{
         transform:rotate(360deg);
-        margin-left: 85vw;
+        margin-left: 15vw;
     }
 }
 

@@ -1,0 +1,78 @@
+html, body{
+    background-color: #8689AC;
+    color: #000000;
+}
+/*https://coolors.co/0beaab-e9d758-348aa7-706f9b-7e5b86*/
+.nav{
+    background-image: url("hobbies5.jpg");
+    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-color: #706f9b;
+    border: 1rem;
+    border-radius: 1rem;    
+}
+
+.container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.columna1, .columna2, .columna3, .container-inner{
+    width: 100%;
+}
+
+.menu li a {
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+    text-decoration: none;
+    color: #d81e5b;
+    padding: 20px;
+    display: inline-block;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(11);
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+.menu li a:hover{
+    background-color: #0beaab;
+    box-shadow: 0px 0px 100px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1.2);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1.2);
+}
+
+@media (min-width: 600px){
+    
+    .columna1{
+        width: 25%;
+        height: 100vh;
+    }
+    .container-inner{
+        width: 75%;
+    }
+}
+
+@media (min-width: 800px){
+    .container{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+} 

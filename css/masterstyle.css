@@ -17,7 +17,6 @@ html, body{
 }
 nav,section,footer,article,aside{
     border: 2px solid #6457a6;
-    ;
     margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
@@ -32,4 +31,10 @@ article, aside{
 
 nav, section, footer{
     background-color: #f3b9d1;
+}
+.page-footer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
 }
