@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/problema.css">
+    <script src="JS/problema1.js"></script>
+    <title>Problema 1</title>
+</head>
+<body>
+    <p>
+        Se desea programar un formulario el cual sea capaz de calcular el interes al 2% mensual
+        sobre una capital a invertir
+    </p>
+    <form name="formulario" method="GET" action="problema1.html">
+        <table align="center" border="1">
+            <tr>
+                <td class="td_up">Introduce la cantidad a invertir</td>
+                <td class="td_down"><input type="text" name="cantidad" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" value="interes" name="enviar" onclick="return interes(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Su saldo con intere del 2% mensual</td>
+                <td class="td_down"><input type="text" name="sueldoti" id="cantidadti" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" name="borrard" value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="formulario.html">Regreso a principal formulario</a>
+</body>
+</html>
