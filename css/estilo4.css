@@ -8,6 +8,7 @@ body {
 /*https://coolors.co/0beaab-e9d758-348aa7-706f9b-7e5b86*/
 
 .nav {
+    text-align: center;
     background-image: url("hobbies5.jpg");
     padding: 100px;
     padding-top: 50px;
@@ -15,6 +16,7 @@ body {
     border-color: #706f9b;
     border: 1rem;
     border-radius: 1rem;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -22,7 +24,13 @@ body {
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
+    padding: 1rem;
 }
+
+audio{
+    width: 80%;
+}
+
 
 .columna1,
 .columna2,

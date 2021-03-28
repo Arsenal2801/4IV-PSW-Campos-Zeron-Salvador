@@ -16,6 +16,7 @@ body {
     border-color: #706f9b;
     border: 1rem;
     border-radius: 1rem;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -24,6 +25,10 @@ body {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     padding: 1rem;
+}
+
+audio{
+    width: 80%;
 }
 
 .columna1 {
@@ -56,7 +61,7 @@ body {
 .columna2 {
     font-size: 20px;
     font-style: italic;
-    background-color: #3a9bbb;
+    background-image: linear-gradient(to right, #a746ce, #3a9bbb);
     padding: 15px;
     border-radius: 1rem;
     text-align: center;
@@ -105,6 +110,11 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.gif{
+    width: 95%;
+    height: auto;
 }
 
 #galeria {

@@ -3,7 +3,8 @@ html, body{
     color: #000000;
 }
 /*https://coolors.co/0beaab-e9d758-348aa7-706f9b-7e5b86*/
-.nav{
+.nav {
+    text-align: center;
     background-image: url("hobbies5.jpg");
     padding: 100px;
     padding-top: 50px;
@@ -11,6 +12,7 @@ html, body{
     border-color: #706f9b;
     border: 1rem;
     border-radius: 1rem;
+    flex-wrap: wrap;
 }
 
 .container{
@@ -18,6 +20,7 @@ html, body{
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
+    padding: 1rem;
 }
 
 .columna1, .columna2, .columna3, .container-inner{
@@ -38,6 +41,11 @@ html, body{
     -moz-transform: scale(11);
 }
 
+audio{
+    width: 80%;
+}
+
+
 .menu li{
     display: inline-block;
     text-align: center;
@@ -56,6 +64,31 @@ html, body{
     -ms-transform: scale(1.2);
     -moz-transition: all 200ms ease-out;
     -moz-transform: scale(1.2);
+}
+
+.columna2 {
+    font-size: 20px;
+    font-style: italic;
+    background-image: linear-gradient(to right, #a746ce, #3a9bbb);
+    padding: 15px;
+    border-radius: 1rem;
+    padding: 8px;
+}
+
+.img {
+    width: 95%;
+    height: auto;
+}
+
+.video{
+    width: 95%;
+    height: auto;
+}
+
+hr {
+    max-width: 100%;
+    height: 3px;
+    background-color: white;
 }
 
 @media (min-width: 600px){
