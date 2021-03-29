@@ -24,7 +24,7 @@ html, body{
 }
 
 audio{
-    width: 80%;
+    width: 85%;
 }
 
 .columna1{
@@ -42,12 +42,17 @@ audio{
     padding: 10px;
 }
 
+hr {
+    max-width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
 .columna3 {
     text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em cyan, 0 0 0.2em cyan;
     font-size: 35px;
     font-style: italic;
     text-align: end;
-
 }
 
 .img {

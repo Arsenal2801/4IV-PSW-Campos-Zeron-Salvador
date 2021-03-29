@@ -27,10 +27,42 @@ body {
     padding: 1rem;
 }
 
-audio{
-    width: 80%;
+.columna3 {
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em cyan, 0 0 0.2em cyan;
+    font-size: 35px;
+    font-style: italic;
+    text-align: end;
 }
 
+audio{
+    width: 85%;
+}
+
+hr {
+    max-width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.columna1{
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+    text-align: center;
+    color: #d81e5b;
+}
+
+.columna2 {
+    font-size: 20px;
+    font-style: italic;
+    background-image: linear-gradient(to right, #a746ce, #3a9bbb);
+    padding: 15px;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.img {
+    width: 95%;
+    height: auto;
+}
 
 .columna1,
 .columna2,
