@@ -31,6 +31,13 @@ audio{
     width: 85%;
 }
 
+.txt {
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em cyan, 0 0 0.2em cyan;
+    font-size: 35px;
+    font-style: italic;
+    text-align: end;
+}
+
 .columna1 {
     color: #d81e5b;
     text-shadow: 0.8em 0.8em 0.4em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
