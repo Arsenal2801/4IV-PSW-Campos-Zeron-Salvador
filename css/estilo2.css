@@ -45,6 +45,11 @@ audio{
     width: 80%;
 }
 
+.columna1{
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+    color: #d81e5b;
+}
+
 
 .menu li{
     display: inline-block;
@@ -78,6 +83,14 @@ audio{
 .img {
     width: 95%;
     height: auto;
+}
+
+.columna3 {
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em cyan, 0 0 0.2em cyan;
+    font-size: 35px;
+    font-style: italic;
+    text-align: end;
+
 }
 
 .video{

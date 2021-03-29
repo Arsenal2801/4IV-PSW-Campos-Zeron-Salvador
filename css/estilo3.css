@@ -27,6 +27,35 @@ audio{
     width: 80%;
 }
 
+.columna1{
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em #d81e5b, 0 0 0.2em #d81e5b;
+    color: #d81e5b;
+    font-size: 19px;
+}
+
+.columna2 {
+    font-size: 20px;
+    font-style: italic;
+    background-image: linear-gradient(to right, #a746ce, #3a9bbb);
+    padding: 15px;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.columna3 {
+    text-shadow: 0.8em 0.8em 0.3em #000000, 0 0 0.2em cyan, 0 0 0.2em cyan;
+    font-size: 35px;
+    font-style: italic;
+    text-align: end;
+
+}
+
+.img {
+    width: 95%;
+    height: auto;
+}
+
+
 
 .columna1, .columna2, .columna3, .container-inner{
     width: 100%;
