@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/problema.css">
+    <script src="JS/problema4.js"></script>
+    <title>Problema 4</title>
+</head>
+
+<body>
+    <!-- Un alumno desea saber cual sera su calificacion final en la materia de Algoritmos. Dicha calificacion se compone
+        de los siguientes porcentajes:
+        55% del promedio de sus calificaciones parciales
+        30% de la calificacion de examen final
+        15% de la calificacion de un trabajo final -->
+    <p>
+        Un alumno desea saber cual sera su calificacion final en la materia de Algoritmos. Dicha calificacion se compone
+        de los siguientes porcentajes:
+    <ul>
+        <li>55% del promedio de sus calificaciones parciales</li>
+        <li>30% de la calificacion de examen final</li>
+        <li>15% de la calificacion de un trabajo final</li>
+    </ul>
+    </p>
+    <form name="formulario" method="GET" action="problema1.html">
+        <table align="center" border="1">
+            <tr>
+                <td class="td_up">Calificacion 1° parcial</td>
+                <td class="td_down"><input type="text" name="p1" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Calificacion 2° parcial</td>
+                <td class="td_down"><input type="text" name="p2" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Calificacion 3° parcial</td>
+                <td class="td_down"><input type="text" name="p3" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Calificacion Examen</td>
+                <td class="td_down"><input type="text" name="examen" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Calificacion Trabajo Final</td>
+                <td class="td_down"><input type="text" name="trabajo" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down">
+                    <input type="button" value="Calcular" name="enviar" onclick="return validar(event)">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_up">Su promedio final es:</td>
+                <td class="td_down"><input type="text" name="califFinal" id="califFinal" readonly="readonly"
+                        class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" name="borrard" value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="formulario.html">Regreso a principal formulario</a>
+</body>
+
+</html>

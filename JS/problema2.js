@@ -1,7 +1,3 @@
-/*
-vamos a crear una funcion que se encargue de validar a traves de una expresion regular la entrada de datos dentro del campo de texto
-*/
-
 function validarn(e){
     var teclado = (document.all)?e.keyCode:e.which;
     if(teclado==8)return true;
@@ -13,12 +9,26 @@ function validarn(e){
 function interes(){
     var valor = document.formulario.cantidad.value;
     var resultado = parseInt(valor);
-    var interes = resultado*0.02;
-    var total = resultado + interes
+    var interes = resultado*0.1;
+    var totalVentas = 3*interes
+    var total = resultado + totalVentas
     document.formulario.sueldoti.value="$"+total;
+}
+
+function ventas(){
+    var valor = document.formulario.cantidad.value;
+    var resultado = parseInt(valor);
+    var interes = resultado*0.1;
+    var total = interes
+    document.formulario.cantidadventas.value="$"+total;
 }
 
 function borrar(){
     document.formulario.cantidad.value="";
     document.formulario.sueldoti.value="";
+}
+
+function mostrar(){
+    interes()
+    ventas()
 }
