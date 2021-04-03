@@ -14,6 +14,6 @@ function compra(){
 }
 
 function borrar(){
-    document.formulario.cantidad.value="";
-    document.formulario.sueldoti.value="";
+    document.formulario.tcompra.value="";
+    document.formulario.descuento.value="";
 }
