@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/problema.css">
+    <script src="JS/problema8.js"></script>
+    <title>Problema 8</title>
+</head>
+<body>
+    <!-- Leer 3 numeros diferentes e imprimir el mas grande de los 3 -->
+    <p>
+        Leer 3 numeros diferentes e imprimir el mas grande de los 3
+    </p>
+    <form name="formulario" method="GET" action="problema1.html">
+        <table align="center" border="1">
+            <tr>
+                <td class="td_up">Numero 1</td>
+                <td class="td_down"><input type="text" name="num1" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Numero 2</td>
+                <td class="td_down"><input type="text" name="num2" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Numero 3</td>
+                <td class="td_down"><input type="text" name="num3" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" value="Calcular" name="enviar" onclick="return calcular(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Resultado</td>
+                <td class="td_down"><input type="text" name="Resultado" id="Resultado" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" name="borrard" value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="formulario.html">Regreso a principal formulario</a>
+</body>
+</html>

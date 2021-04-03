@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/problema.css">
+    <script src="JS/problema10.js"></script>
+    <title>Problema 10</title>
+</head>
+<body>
+    <img align="center" src="imagenes/problema10.png">
+    <ul>
+        Escribe la opcion correspondiente en años de trabajo:
+    </ul>
+    <ol>
+        <li>
+            Si tienes menos de un año
+        </li>
+        <li>
+            Si tienes de 1 a 2 años
+        </li>
+        <li>
+            si tienes de 2 a 5 años
+        </li>
+        <li>
+            si tienes de 5 a 10 años
+        </li>
+        <li>
+            si tienes mas de 10 años
+        </li>
+    </ol>
+    <form name="formulario" method="GET" action="problema1.html">
+        <table align="center" border="1">
+            <tr>
+                <td class="td_up">Años de trabajo</td>
+                <td class="td_down"><input type="text" name="años" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Salario sin utilidad</td>
+                <td class="td_down"><input type="text" name="salarioBase" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" value="Calcular" name="enviar" onclick="return calcular(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Salario completo</td>
+                <td class="td_down"><input type="text" name="salario" id="salario" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" name="borrard" value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="formulario.html">Regreso a principal formulario</a>
+</body>
+</html>
