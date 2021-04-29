@@ -1,4 +1,4 @@
-function vChar() {
+function vtext() {
     // sólo se aceptan letras mayúsculas y minúsculas. No espacios ni acentos.
     var char = /^[A-Za-z]+$/;
     var vEmail = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
@@ -17,7 +17,7 @@ function vChar() {
     }
 }
 
-function vNum1() {
+function num() {
     // solo se aceptan numeros sin espacios
     var NUM = /^[0-9]+$/;
 
@@ -34,7 +34,7 @@ function vNum1() {
     }
 }
 
-function vValidar() {
+function vTxt() {
     // solo se aceptan numeros sin espacios
     var NUM = /^[0-9]+$/;
 
@@ -52,16 +52,16 @@ function vValidar() {
 
 }
 
-function vVal() {
+function vNum() {
     var char = /^[A-Za-z]+$/;
     var vEmail = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
 
-    if (document.querySelector('#Nombre').value.match(char) && document.querySelector('#Appat').value.match(char) &&
-            document.querySelector('#Appmat').value.match(char) && document.querySelector('#Email').value.match(vEmail)) {
+    if (document.querySelector('#nombre2').value.match(char) && document.querySelector('#appat2').value.match(char) &&
+            document.querySelector('#appmat2').value.match(char) && document.querySelector('#email2').value.match(vEmail)) {
         return true;
     }
-    if (document.querySelector('#Nombre').value == "" || document.querySelector('#Appat').value == ""
-            || document.querySelector('#Appmat').value == "" || document.querySelector('#Edad').value == "" || document.querySelector('#Email').value == "") {
+    if (document.querySelector('#nombre2').value == "" || document.querySelector('#appat2').value == ""
+            || document.querySelector('#appmat2').value == "" || document.querySelector('#edad2').value == "" || document.querySelector('#email2').value == "") {
         alert('Por favor, complete todos los espacios')
         event.preventDefault()
     } else {
@@ -71,6 +71,6 @@ function vVal() {
 }
 
 function validar(){
-    vVal()
-    vValidar()
+    vTxt();
+    vNum();
 }
