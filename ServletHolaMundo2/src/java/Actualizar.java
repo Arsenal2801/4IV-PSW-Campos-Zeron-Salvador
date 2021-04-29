@@ -12,13 +12,14 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 //de poder realizar las consultas a la bd
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.servlet.ServletConfig;
 
 /**
  *
  * @author demon
  */
-public class Registro extends HttpServlet {
+public class Actualizar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,12 +37,12 @@ public class Registro extends HttpServlet {
      */
     private Connection con;
     private Statement set;
-    private ResultSet rs;
 
     //vamos a crear el metodo constructor
+    @Override
     public void init(ServletConfig cfg) throws ServletException {
         //para conectarnos con la bd
-        String url = "jdbc:mysql:3306//localhost/registro4iv7_2";
+        String url;
         //driver:gestorbd:puerto//IP/nombrebd
 
         String userName = "root";
@@ -77,35 +78,23 @@ public class Registro extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
 
             //manipular los datos del formulario
-            String nom, appat, appmat, correo, ip, iph;
-            int edad, puerto, puertoh;
+            String nom, appat, appmat, correo;
+            int edad, id;
 
-            ip = request.getLocalAddr();
-            puerto = request.getLocalPort();
+            nom = request.getParameter("Nombre");
+            appat = request.getParameter("Appat");
+            appmat = request.getParameter("Appmat");
+            correo = request.getParameter("Email");
 
-            iph = request.getRemoteAddr();
-            puertoh = request.getRemotePort();
-
-            nom = request.getParameter("nombre");
-            appat = request.getParameter("appat");
-            appmat = request.getParameter("appmat");
-            correo = request.getParameter("email");
-
-            edad = Integer.parseInt(request.getParameter("edad"));
+            id = Integer.parseInt(request.getParameter("id"));
+            edad = Integer.parseInt(request.getParameter("Edad"));
 
             try {
 
-                //querry para poder insertar los datos en la bd
-                /*
-                insert into nombretabla (atributo, atributo, ...)
-                values ("valor1", 'valor2', valor3, ...)
-                 */
-                String q = "insert into Mregistro "
-                        + "(nom_usu, appat_usu, apmat_usu, edad, email_usu) "
-                        + "values "
-                        + "('" + nom + "', '" + appat + "', '" + appmat + "', " + edad + ", '" + correo + "')";
-
+                String q = "update Mregistro set nom_usu='" + nom + "',appat_usu='" + appat + "',apmat_usu='" + appmat + "',edad=" + edad + ",email_usu='" + correo + "' where id_usu=" + id;
                 set.executeUpdate(q);
+
+                set = con.createStatement();
 
                 out.println("<!DOCTYPE html>");
                 out.println("<html>"
@@ -115,7 +104,8 @@ public class Registro extends HttpServlet {
                 out.println("</head>");
                 out.println("<body>"
                         + "<div class='container'>"
-                        + "<br>Tu nombre es: " + nom);
+                        + "<h3>TUS DATOS ACTUALIZADOS SON</h3>"
+                        + "<br>Tu nombre es:" + nom);
                 out.println("<br>"
                         + "Tu Apellido Paterno es:" + appat
                         + "<br>"
@@ -124,37 +114,34 @@ public class Registro extends HttpServlet {
                         + "Tu Edad es:" + edad
                         + "<br>"
                         + "Tu correo electronico es:" + correo
-                        + "<br>");
-                out.println("<h1>Registro Exitoso</h1>"
                         + "<br>"
-                        + "La IP Local es: " + ip
-                        + "<br>"
-                        + "La IP del host: " + iph
-                        + "<br>"
-                        + "Puerto Local: " + puerto
-                        + "<br>"
-                        + "Puerto Host:" + puertoh
                         + "<br>"
                         + "<a href='index.html'>Regresar al Formulario</a>"
                         + "<br>"
                         + "<a href='Consultar'>Consultar la Tabla General de Usuarios</a>"
                         + "</div>");
+
                 out.println("</body>");
                 out.println("</html>");
 
-                System.out.println("Datos registrados en la tabla");
+                System.out.println("Consulta exitosa");
+                set.close();
+                con.close();
+
+                System.out.println("Datos actualizados en la tabla");
 
             } catch (Exception e) {
 
-                System.out.println("No se registraron los datos en la tabla");
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
                 out.println("<!DOCTYPE html>");
-                out.println("<html>");
+                out.println("<html>"
+                        + "<link rel=\"stylesheet\" href=\"CSS/estilo.css\">");
                 out.println("<head>");
                 out.println("<title>Registro de Usuarios</title>");
                 out.println("</head>");
                 out.println("<body>"
+                        + "<div class='container'>"
                         + "<h1>No se pudo registrar, hubo un error</h1>"
                         + "<a href='index.html'>Regresar al Formulario</a>"
                         + "</div>");
@@ -164,6 +151,7 @@ public class Registro extends HttpServlet {
             }
 
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -198,8 +186,8 @@ public class Registro extends HttpServlet {
     /**
      * Returns a short description of the servlet.
      *
-     * @return a String containing servlet description
      */
+    @Override
     public void destroy() {
         try {
             con.close();

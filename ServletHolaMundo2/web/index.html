@@ -1,41 +1,86 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>CRUD JAVA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, 
               initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/estilo.css">
+        
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
+        <div class="container"><h1>CRUD USUARIO</h1></div>
         <div class="container" >
-            <form name="formulario" method="get"  
+            <form name="formulario" method="post"  
                   action="Registro">
                 <label>Nombre:</label>
-                <input type="text" name="nombre"  >
+                <input type="text" name="nombre" id="nombre" >
                 <br>
                 <label>Apellido Paterno:</label>
-                <input type="text" name="appat"  >
+                <input type="text" name="appat" id="appat" >
                 <br>
                 <label>Apellido Materno:</label>
-                <input type="text" name="appmat"  >
+                <input type="text" name="appmat" id="appmat"  >
                 <br>
                 <label>Edad:</label>
                 <input type="number" name="edad" min="01" max="99" 
-                       size="2"  >
+                       size="2" id="edad" >
                 <br>
                 <label>Correo:</label>
-                <input type="email" name="email"  >
+                <input type="email" name="email" id="email" >
                 <br>
-                <input type="submit" value="Enviar Datos de Registro">
-                <input type="reset" value="Borrar Registro">
+                <input class="boton" type="submit" value="Enviar Datos de Registro" onclick="vChar(event)">
+                <input class="boton" type="reset" value="Borrar Registro">
             </form>
         </div>
         <br>
-        <div class ="contenedorConsultar">
+        <div class="contendorConsultar">
             <br>
-            <form>
-                
+            <form method="get" name="formularioconsultar" action="Consultar">
+                <input class="boton" type="submit" value="Consultar Tabla General de Usuarios" >
             </form>
         </div>
+        <br>
+        <div class="contenedorEliminar" >
+            <br>
+            <form method="post" name="formularioeliminar" action="Eliminar">
+                <label>Ingresa el ID del usuario que deseas eliminar</label>
+                <input type="number" min="0" size="8" name="eliminar" id="eliminar">
+                <input class="boton" type="submit" value="Eliminar Usuario" onclick="vNum1(event)">
+            </form>
+        </div>
+        <br>
+        <div class="contenedorActualizar" >
+            <form name="formulario" method="post"  
+                  action="Actualizar">
+                <label>ID:</label>
+                <input type="number" name="id" size="8" min="01" id="ID">
+                <br>
+                <label>Nombre:</label>
+                <input type="text" name="Nombre" id="Nombre" >
+                <br>
+                <label>Apellido Paterno:</label>
+                <input type="text" name="Appat" id="Appat" >
+                <br>
+                <label>Apellido Materno:</label>
+                <input type="text" name="Appmat" id="Appmat"  >
+                <br>
+                <label>Edad:</label>
+                <input type="number" name="Edad" min="01" max="99" 
+                       size="2" id="Edad" >
+                <br>
+                <label>Correo:</label>
+                <input type="email" name="Email" id="Email" >
+                <br>
+                <br>
+                <input class="boton" type="submit" value="Enviar Datos a Actualizar" onclick="validar(event)" >
+            </form>
+        </div>
+        <script src="./JS/validacion.js" type="text/javascript"></script>
     </body>
 </html>

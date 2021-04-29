@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +38,7 @@ public class Consultar extends HttpServlet {
     
     public void init(ServletConfig cfg) throws ServletException{
         //para conectarnos con la bd
-        String url = "jdbc:mysql:3306//localhost/registro4iv7_2";
+        String url = "jdbc:mysql://localhost/registro4iv7_2";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
         String userName = "root";
@@ -51,7 +52,7 @@ public class Consultar extends HttpServlet {
             es por ello que pueden mandar un error, en ese caso
             url = "jdbc:mysql://localhost/registro4iv7";
             */
-            url = "jdbc:mysql://localhost/registro4iv7";
+            url = "jdbc:mysql://localhost/registro4iv7_2";
             con = DriverManager.getConnection(url, userName, password);
             set = con.createStatement();
             
@@ -87,12 +88,14 @@ public class Consultar extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
-            out.println("<html>");
+            out.println("<html>"
+                    + "<link rel=\"stylesheet\" href=\"CSS/estilo.css\">");
             out.println("<head>");
             out.println("<title>Servlet Consultar</title>"
                     + "<link>");            
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body>"
+                        + "<div class='container'>");
             out.println("<h1>Tabla General De Usuarios</h1>");
             out.println("<table border='2'>"
                     + "<thead>"
@@ -118,7 +121,7 @@ public class Consultar extends HttpServlet {
                     nom = rs.getString("nom_usu");
                     appat = rs.getString("appat_usu");
                     appmat = rs.getString("apmat_usu");
-                    edad = rs.getInt("edad_usu");
+                    edad = rs.getInt("edad");
                     correo = rs.getString("email_usu");
                     out.println("<tr>"
                             + "<td>"+id+"</td>"
@@ -144,7 +147,8 @@ public class Consultar extends HttpServlet {
             out.println("</tbody>"
                     + "</table>"
                     + "<br>"
-                    + "<a href='index.html'>Regresar al Formulario</a>");
+                    + "<a href='index.html'>Regresar al Formulario</a>"
+                    + "</div>");
             out.println("</body>");
             out.println("</html>");
         }
